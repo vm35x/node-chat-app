@@ -40,7 +40,7 @@ locationButton.on("click", function() {
       console.log(position)
       socket.emit('createLocationMessage', {
         latitude: position.coords.latitude,
-        longitude: position.coords.longitude
+        longtitude: position.coords.longitude
       })
     },
     function() {

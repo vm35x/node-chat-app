@@ -26,12 +26,12 @@ io.on("connection", socket => {
     callback('This is from server')
   });
 
-  socket.on('createLocationMessage', (coords) => {
-    io.emit('newMessage', generateMessage('Admin', `${coords.latitude}, ${coords.longitude}`));
-  })
+  socket.on('createLocationMessage')
 
   socket.on("disconnect", () => {
-    console.log("User was disconnected");
+    console.log("User was disconnected", (coords) => {
+      
+    });
   });
 });
 
